@@ -16,6 +16,4 @@ if __name__ == "__main__":
     img = cv2.imread("images/timg.jpeg")
     poses = tp(img)
     img = util.draw_bodypose(img, poses,'body_25')
-    cv2.imshow('v',img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    cv2.imwrite('/content/output.png', img)
