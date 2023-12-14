@@ -28,8 +28,8 @@ def draw_bodypose(img, poses,model_type = 'coco'):
                 continue
             x, y = pose[:2]
             cv2.circle(img, (int(x), int(y)), 4, colors[i], thickness=-1)
-            print(f'point{i}.x = {x}')
-            print(f'point{i}.y = {y}')
+            print(f'point{i}.x = {x} point{i}.y = {y}')
+            
     for pose in poses:
         for limb,color in zip(limbSeq,colors):
             p1 = pose[limb[0]]
